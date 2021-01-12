@@ -24,7 +24,7 @@ function ListingDetailsScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  detailsContainer: {
+  detailContainer: {
     padding: 20,
   },
   image: {
