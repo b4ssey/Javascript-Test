@@ -6,10 +6,11 @@ import Apptext from "./Apptext";
 function Card({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
-      <Image style source={image} />
-      <View style={styles.detailsContainer}></View>
-      <Apptext style={styles.title}>{title}</Apptext>
-      <Apptext style={styles.subTitle}>{subTitle}</Apptext>
+      <Image style={styles.image} source={image} />
+      <View style={styles.detailsContainer}>
+        <Apptext style={styles.title}>{title}</Apptext>
+        <Apptext style={styles.subTitle}>{subTitle}</Apptext>
+      </View>
     </View>
   );
 }
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     marginBottom: 20,
     overflow: "hidden",
+    marginVertical: 5,
   },
   detailsContainer: {
     padding: 20,
