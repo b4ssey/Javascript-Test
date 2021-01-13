@@ -1,6 +1,9 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import ListItem from "../components/ListItem";
+import ListItemSeperator from "../components/ListItemSeperator";
+import Screen from "../components/Screen";
+import colors from "../config/colors";
 
 const message = [
   {
@@ -19,18 +22,24 @@ const message = [
 
 function MessageScreen(props) {
   return (
-    <FlatList
-      data={message}
-      keyExtractor={(message) => message.id.toString}
-      renderItem={({ item }) => (
-        <ListItem
-          title={item.title}
-          subTitle={item.description}
-          image={item.image}
-        />
-      )}
-    />
+    <Screen>
+      <FlatList
+        data={message}
+        keyExtractor={(message) => message.id.toString}
+        renderItem={({ item }) => (
+          <ListItem
+            title={item.title}
+            subTitle={item.description}
+            image={item.image}
+            onPress={() => console.log("Message selected", item)}
+          />
+        )}
+        ItemSeparatorComponent={ListItemSeperator}
+      />
+    </Screen>
   );
 }
+
+const styles = StyleSheet.create({});
 
 export default MessageScreen;
