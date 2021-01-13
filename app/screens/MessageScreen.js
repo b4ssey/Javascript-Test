@@ -4,7 +4,7 @@ import ListItem from "../components/ListItem";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 import ListItemSeperator from "../components/ListItemSeperator";
 import Screen from "../components/Screen";
-import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 const initialMessages = [
   {
