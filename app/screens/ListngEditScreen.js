@@ -2,9 +2,9 @@ import React from "react";
 import * as Yup from "yup";
 import { StyleSheet } from "react-native";
 
-import { AppForm, AppFormField, SubmitButton } from "../components/forms/Index";
+import { Form, FormField, SubmitButton } from "../components/forms/Index";
 import Screen from "../components/Screen";
-import AppFormPicker from "../components/forms/AppFormPicker";
+import FormPicker from "../components/forms/FormPicker";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 
 const validationSchema = Yup.object().shape({
@@ -23,7 +23,7 @@ const categories = [
 function ListngEditScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <AppForm
+      <Form
         initialValues={{
           title: "",
           price: "",
@@ -33,15 +33,15 @@ function ListngEditScreen(props) {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        <AppFormField maxLength={255} name="title" placeholder="Title" />
-        <AppFormField
+        <FormField maxLength={255} name="title" placeholder="Title" />
+        <FormField
           keyboardType="numeric"
           maxLength={8}
           name="price"
           placeholder="Price"
           width={120}
         />
-        <AppFormPicker
+        <FormPicker
           items={categories}
           name="category"
           numberOfColumns={3}
@@ -49,7 +49,7 @@ function ListngEditScreen(props) {
           placeholder="Category"
           width={"50%"}
         />
-        <AppFormField
+        <FormField
           maxLength={255}
           multiline
           name="description"
@@ -57,7 +57,7 @@ function ListngEditScreen(props) {
           placeholder="Description"
         />
         <SubmitButton title="Post" />
-      </AppForm>
+      </Form>
     </Screen>
   );
 }

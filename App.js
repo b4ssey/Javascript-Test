@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import AppPicker from "./app/components/AppPicker";
+import Picker from "./app/components/Picker";
 import AppTextInput from "./app/components/AppTextInput";
 import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";

@@ -9,7 +9,7 @@ import {
   Modal,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import AppText from "./Apptext";
+import AppText from "./Text";
 import Screen from "./Screen";
 
 import defaultStyles from "../config/styles";

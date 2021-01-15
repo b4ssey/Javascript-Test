@@ -1,10 +1,10 @@
 import React from "react";
 import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
+import Item from "../components/list/Item";
 import { FlatList, StyleSheet, View } from "react-native";
 import defaultStyles from "../config/styles";
 import Icon from "../components/Icon";
-import ListItemSeperator from "../components/ListItemSeperator";
+import ItemSeperator from "../components/list/ItemSeperator";
 
 const menuItems = [
   {
@@ -27,7 +27,7 @@ function AccountScreen(props) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
-        <ListItem
+        <Item
           title="Mosh Hamedani"
           subTitle="programmingwithmosh@gmail.com"
           image={require("../assets/mosh.jpg")}
@@ -38,7 +38,7 @@ function AccountScreen(props) {
           data={menuItems}
           keyExtractor={(menuItem) => menuItem.title}
           renderItem={({ item }) => (
-            <ListItem
+            <Item
               title={item.title}
               IconComponent={
                 <Icon
@@ -48,10 +48,10 @@ function AccountScreen(props) {
               }
             />
           )}
-          ItemSeparatorComponent={ListItemSeperator}
+          ItemSeparatorComponent={ItemSeperator}
         />
       </View>
-      <ListItem
+      <Item
         title="Log Out"
         IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
       />
