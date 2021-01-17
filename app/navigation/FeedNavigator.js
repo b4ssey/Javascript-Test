@@ -13,7 +13,7 @@ const FeedNavigator = () => (
       headerShown: false,
     }}
   >
-    <Stack.Screen name="Listings" component={ListingsScreen} />
+    <Stack.Screen name={routes.LISTINGS} component={ListingsScreen} />
     <Stack.Screen
       name={routes.LISTING_DETAILS}
       component={ListingDetailsScreen}

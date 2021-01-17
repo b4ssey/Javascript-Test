@@ -9,6 +9,7 @@ import Screen from "./app/components/Screen";
 import AuthNavigator from "./app/navigation/AuthNavigator";
 import navigationTheme from "./app/navigation/navigationTheme";
 import AppNavigator from "./app/navigation/AppNavigator";
+import routes from "./app/navigation/routes";
 
 const Link = () => {
   const navigation = useNavigation();
@@ -60,8 +61,8 @@ const AccountNavigator = () => (
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Feed" component={FeedNavigator} />
-    <Tab.Screen name="Account" component={AccountNavigator} />
+    <Tab.Screen name={routes.FEED} component={FeedNavigator} />
+    <Tab.Screen name={routes.ACCOUNT} component={AccountNavigator} />
   </Tab.Navigator>
 );
 
